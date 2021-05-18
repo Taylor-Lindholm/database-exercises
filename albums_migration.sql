@@ -1,12 +1,13 @@
+CREATE DATABASE IF NOT EXISTS codeup_test_db;
 USE codeup_test_db;
 
-DROP TABLE IF EXISTS 'albums';
+DROP TABLE IF EXISTS albums;
 
-CREATE TABLE 'albums'(
-    id INT,
-    artists VARCHAR(100),
-    name VARCHAR(50),
-    relealse_date VARCHAR(50),
-    sales FLOAT,
-    genre VARCHAR(50)
+CREATE TABLE albums(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    artists VARCHAR(100) DEFAULT 'NONE',
+    name VARCHAR(50) NOT NULL,
+    relealse_date INT DEFAULT NOT NULL,
+    sales FLOAT DEFAULT NOT NULL,
+    genre VARCHAR(50) DEFAULT 'NONE'
 )
